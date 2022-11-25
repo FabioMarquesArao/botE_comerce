@@ -28,8 +28,6 @@ class Bote():
             soup = BeautifulSoup(page.content,'html.parser')
             computers = soup.find_all('div', class_="thumbnail")
            
-            
-            
             if computers:
                 i+= 1
             else:
@@ -50,13 +48,6 @@ class Bote():
                 data_computers.append(ratings)
                 data_all.append(data_computers)
                 Bote.gera_csv(data_all)
-
-
-
-
-
-
-
 
     def gera_csv(data_all):
        
